@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: template('Список товаров', ~{::th:block})}">
+	<th:block>
+		<p class="fs-4">Список товаров</p>
+		<hr>
+		
+		<div class="alert alert-danger" th:if="${products.isEmpty()}">
+			<span>Список товаров пуст...</span>
+		</div>
+		
+		<ol>
+			<li th:each="product : ${products}">
+				<span th:text="${product.name}"></span>
+				<span th:text="${product.price}"></span>
+			</li>
+		</ol>
+	</th:block>
+</html>

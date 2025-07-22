@@ -1,11 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: template(~{::title}, ~{::th:block})}">
-	<head>
-		<title>Главная страница</title>
-	</head>
-	<body>
-		<th:block>
-			<h1>Добро пожаловать!</h1>
-		</th:block>
-	</body>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: template('Главная страница', ~{::th:block})}">
+	<th:block>
+		<h1>Добро пожаловать!</h1>
+	</th:block>
 </html>
